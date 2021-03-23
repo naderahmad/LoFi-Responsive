@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.night {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgb(56,38,84);
+    background: linear-gradient(180deg, rgba(56,38,84,1) 0%, rgba(0,0,0,0.9472163865546218) 100%);
+}
+.moon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 5%;
+    left: 10%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,252,191,0.9472163865546218) 100%);
+    border-radius: 50%;
+    z-index: 1000;
+    -moz-box-shadow: 0px 0px 60px #fff;
+    -webkit-box-shadow: 0px 0px 60px #fff;
+    box-shadow: 0px 0px 60px #fff;
+}
+.night w {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+.surface {
+    height: 140px;
+    width: 900%;
+    background: url(img/Img_02.png);
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    z-index: 1000;
+    animation: moveRight 10s linear infinite;
+}
+.car {
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    z-index: 1000;
+    animation: suspension 1s linear infinite;
+}
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spotify {
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    display: none;
+}
+.spotifySm {
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+@keyframes animate {
+    0% {
+        opacity: 50%;
+        transform: translateX(0);
+    }
+    10%,90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0%;
+        transform: translateX(-100px);
+    }
+}
+@keyframes moveRight {
+    100%{
+        transform: translateX(-2950px);
+    }
+}
+@keyframes suspension {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
+@media screen and (min-width: 768px) {
+    .spotify {
+        display: flex;
+        width: 70%;
+    }
+    .spotifySm {
+        display: none;
+    }
+    .car {
+        left: 30%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .spotify {
+        display: flex;
+        width: 70%;
+    }
+    .spotifySm {
+        display: none;
+    }
+    .car {
+        left: 30%;
+    }
+}
