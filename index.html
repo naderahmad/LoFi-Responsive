@@ -10,8 +10,17 @@
 <body>
     <div class="night">
         <div class="content">
-            <iframe class="spotify" src="https://open.spotify.com/embed/playlist/35xI4hSJ8MdO1xkXwsd56a" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <iframe class="spotifySm" src="https://open.spotify.com/embed/playlist/35xI4hSJ8MdO1xkXwsd56a" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="selectPlayer">     
+                <img src="img/spotify.png" alt="">
+                <label class="switch">
+                    <input id="checkbox" type="checkbox" onclick="spotify()" >
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <iframe id="iframe" class="spotifySm" src="https://open.spotify.com/embed/playlist/35xI4hSJ8MdO1xkXwsd56a" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <audio class="player" controls>
+                <source src="sound/lofi.mp3" type="audio/mp3">
+            </audio>
         </div>
         <div class="moon"></div>
         <div class="surface">

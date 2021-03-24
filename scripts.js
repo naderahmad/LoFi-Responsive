@@ -23,3 +23,23 @@ function stars() {
     }
 }
 stars();
+
+function spotify() {
+    let playerSpotify = document.getElementById("iframe"),
+        playerhtml =  document.querySelector(".player"),
+        check = document.getElementById("checkbox");
+
+    if (check.checked == false) {
+        playerSpotify.style.visibility = "visible";
+        playerSpotify.style.width = "60%"
+        playerSpotify.src = "https://open.spotify.com/embed/playlist/35xI4hSJ8MdO1xkXwsd56a"
+        playerhtml.style.display = "none";
+        playerhtml.pause();
+    } else {
+        playerSpotify.style.visibility ="hidden";
+        playerSpotify.style.width = "0";
+        playerSpotify.src = "";
+        playerhtml.style.display = "flex";
+    }
+}
+

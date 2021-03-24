@@ -56,16 +56,76 @@
     justify-content: center;
     align-items: center;
 }
-.spotify {
-    z-index: 1000;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-    display: none;
-}
 .spotifySm {
     z-index: 1000;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
+}
+.player {
+    display: none;
+}
+#iframe {
+    display: fixed;
+}
+.active {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.selectPlayer {
+    top: 37%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+.selectPlayer img {
+    width: 50%;
+    height: 90%;
+}
+.switch {
+    right: 6%;
+    position: absolute;
+    display: inline-block;
+    width: 21%;
+    height: 45%;
+    z-index: 1000;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1DB954;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+.switch input {
+    display: none;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 65%;
+    width: 33%;
+    right: 9%;
+    bottom: 20%;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider {
+    background-color: rgba(56,38,84,1);
+}
+input:checked + .slider:before {
+    transform: translateX(-23px);
 }
 @keyframes animate {
     0% {
@@ -96,27 +156,70 @@
         transform: translateY(-1px);
     }
 }
-@media screen and (min-width: 768px) {
-    .spotify {
+@media screen and (min-width: 200px) {
+
+    .spotifySm {
         display: flex;
         width: 70%;
-    }
-    .spotifySm {
-        display: none;
+        height: 8%;
     }
     .car {
         left: 30%;
+        bottom: 5.5%;
+    }
+    .selectPlayer {
+        width: 180px;
+        top: 380px;
+    }
+}
+@media screen and (min-width: 360px) {
+
+    .spotifySm {
+        display: flex;
+        width: 70%;
+        height: 8%;
+    }
+    .car {
+        left: 30%;
+        bottom: 5.5%;
+    }
+    .selectPlayer {
+        width: 180px;
+        top: 380px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .spotifySm {
+        display: flex;
+        width: 70%;
+        height: 35%;
+    }
+    .car {
+        left: 30%;
+        bottom: 4%;
+    }
+    .selectPlayer {
+        width: 230px;
+        top: 245px;
     }
 }
 @media screen and (min-width: 1024px) {
-    .spotify {
-        display: flex;
-        width: 70%;
-    }
+
     .spotifySm {
-        display: none;
+        display: flex;
+        width: 60%;
+        height: 45%;
     }
     .car {
         left: 30%;
+        bottom: 4.5%;
     }
+    .selectPlayer {
+        width: 250px;
+        top: 190px;
+    }
+    input:checked + .slider:before {
+        transform: translateX(-29px);
+    }
+
 }
