@@ -185,7 +185,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 180px;
-        top: 40%;
+        top: 38%;
     }
 }
 @media screen and (min-width: 768px) {
