@@ -169,7 +169,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 180px;
-        top: 40%;
+        top: 35%;
     }
 }
 @media screen and (min-width: 360px) {
