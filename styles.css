@@ -169,7 +169,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 180px;
-        top: 380px;
+        top: 40%;
     }
 }
 @media screen and (min-width: 360px) {
@@ -185,7 +185,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 180px;
-        top: 380px;
+        top: 40%;
     }
 }
 @media screen and (min-width: 768px) {
@@ -200,7 +200,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 230px;
-        top: 245px;
+        top: 25%;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -216,7 +216,7 @@ input:checked + .slider:before {
     }
     .selectPlayer {
         width: 250px;
-        top: 190px;
+        top: 19%;
     }
     input:checked + .slider:before {
         transform: translateX(-29px);
