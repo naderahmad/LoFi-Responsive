@@ -31,5 +31,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Nader Ahmad - [@naderahmad](https://twitter.com/naderahmad) - naderahmad7x@gmail.com
 
-Project Link: [https://github.com/naderahmad/Interstellar](https://github.com/naderahmad/Interstellar)
+Project Link: [Lo-Fi Page](https://naderahmad.github.io/LoFi-Responsive/)
 
